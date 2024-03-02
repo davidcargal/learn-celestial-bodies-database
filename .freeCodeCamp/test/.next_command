@@ -82,3 +82,16 @@ pg_dump -cC --inserts -U freecodecamp universe > universe.sql
 pg_dump -cC --inserts -U freecodecamp universe > universe.sql
 pg_dump -cC --inserts -U freecodecamp universe > universe.sql
 pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+ssh 'freecodecam-learncelest-1y6xlgjhqz3@freecodecam-learncelest-1y6xlgjhqz3.ssh.ws-us108.gitpod.io'
+ssh 'freecodecam-learncelest-1y6xlgjhqz3#eJyPBpQT6tOLQKoEB8.DRZsIWYuVeJz.@freecodecam-learncelest-1y6xlgjhqz3.ssh.ws-us108.gitpod.io'
+[ -d "$HOME/bin" ]
+[ -d "$HOME/.local/bin" ]
+PATH="$HOME/.local/bin:$PATH"
+[ -e /home/gitpod/.nix-profile/etc/profile.d/nix.sh ]
+. /home/gitpod/.nix-profile/etc/profile.d/nix.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]]
+source "$HOME/.rvm/scripts/rvm"
+[[ -n $SSH_CONNECTION ]]
+cd "/workspace/project"
+echo $PWD >> /workspace/project/.freeCodeCamp/test/.cwd
+history -a

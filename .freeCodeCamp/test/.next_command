@@ -95,3 +95,9 @@ source "$HOME/.rvm/scripts/rvm"
 cd "/workspace/project"
 echo $PWD >> /workspace/project/.freeCodeCamp/test/.cwd
 history -a
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+echo $PWD >> /workspace/project/.freeCodeCamp/test/.cwd
+history -a
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+echo $PWD >> /workspace/project/.freeCodeCamp/test/.cwd
+history -a

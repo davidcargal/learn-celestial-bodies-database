@@ -274,9 +274,12 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.galaxy VALUES (1, 'Milky Way', NULL, NULL, NULL);
-INSERT INTO public.galaxy VALUES (2, 'Snickers', NULL, NULL, NULL);
-INSERT INTO public.galaxy VALUES (3, 'Twix', NULL, NULL, NULL);
+INSERT INTO public.galaxy VALUES (1, 'Milky Way', true, true, 'spiral');
+INSERT INTO public.galaxy VALUES (2, 'Snickers', false, true, 'elliptical');
+INSERT INTO public.galaxy VALUES (3, 'Twix', false, true, 'lenticular');
+INSERT INTO public.galaxy VALUES (4, 'Hersheys', false, false, 'irregular');
+INSERT INTO public.galaxy VALUES (5, '3-Musketeers', false, true, 'spiral');
+INSERT INTO public.galaxy VALUES (6, 'Reeses', false, false, 'lenticular');
 
 
 --
@@ -295,6 +298,13 @@ INSERT INTO public.galaxy VALUES (3, 'Twix', NULL, NULL, NULL);
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.star VALUES ('The Sun', 1, 1, 8, 'yellow dwarf');
+INSERT INTO public.star VALUES ('Kevin', 2, 2, 77, 'hypergiant');
+INSERT INTO public.star VALUES ('Leopold IX', 3, 3, 4, 'supergiant');
+INSERT INTO public.star VALUES ('Og', 4, 4, 11, 'subdwarf');
+INSERT INTO public.star VALUES ('Ringo', 5, 5, 7, 'white dwarf');
+INSERT INTO public.star VALUES ('Jackmerius Tacktheritrix', 6, 6, 42, 'bright giant');
+INSERT INTO public.star VALUES ('Swirvithan L Goodling-Splatt', 6, 7, 1, 'rock');
 
 
 --
@@ -308,7 +318,7 @@ SELECT pg_catalog.setval('public.continent_continent_id_seq', 1, false);
 -- Name: galaxy_galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 3, true);
+SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 
 
 --
@@ -329,7 +339,7 @@ SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, false);
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 1, false);
+SELECT pg_catalog.setval('public.star_star_id_seq', 7, true);
 
 
 --
